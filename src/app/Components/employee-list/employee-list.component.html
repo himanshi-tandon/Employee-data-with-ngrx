@@ -1,0 +1,9 @@
+<div *ngIf="employees$ | async as employees; else loading">
+    <ul >
+      <li *ngFor="let employee of employees$ | async">
+    {{employee | json}}
+      </li>
+    </ul>
+  </div>
+  
+  <ng-template #loading>Loading...</ng-template>
